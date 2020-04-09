@@ -70,7 +70,7 @@
         "build:containers:canary": "lerna run build:container:canary --stream",
         "build:containers:release": "lerna run build:container:latest --stream",
         "publish:preview": "lerna publish --yes --skip-git --exact --cd-version=prerelease --pre-dist-tag preview --preid=preview.$TRAVIS_BUILD_NUMBER",
-        "heroku-postbuild": "yarn build:ui && lerna run heroku-postbuild --stream"
+        "heroku-postbuild": "yarn build && yarn build:ui && lerna run heroku-postbuild --stream"
     },
     "workspaces": [
         "packages/*"
